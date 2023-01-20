@@ -1,0 +1,91 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: serif;
+}
+
+body{
+    height: 100%;
+    background-color: #2B7A78;
+}
+
+#cuadrito{
+    height: 300px;
+    width: 500px;
+    background-color: black;
+    position: absolute;
+
+    top: 50%;
+    margin-top: -150px;
+    
+    left: 50%;
+    margin-left: -250px;
+}
+
+header, footer{
+    height: 80px;
+    width: 100%;
+    background-color: #17252A;
+    text-align: center;
+}
+
+main{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.container{
+    width: 100%;
+}
+
+.container > div{
+    background-color: #DEF2F1;
+    height: 200px;
+    width: 33%;
+    float: left;
+    border: solid 1px black;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.container::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+@media screen and (max-width: 900px) {
+    .container > div{
+        background-color: #DEF2F1;
+        height: 200px;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container > div{
+        background-color: #DEF2F1;
+        height: 200px;
+        width: 75%;
+    }
+}
+
+.Titulo{
+    font-size: 50px;
+    color: #FEFFFF;
+    
+}
+
+.texto{
+    font-size: 25px;
+}
+
+.subtexto{
+    font-size: 20px;
+}
+
+.imagen{
+    height: 130px;
+}
