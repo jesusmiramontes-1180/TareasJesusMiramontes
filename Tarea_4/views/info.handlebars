@@ -1,0 +1,21 @@
+<h1 class="Tittle2">Lista de Noticias</h1>
+<br>
+ <a href="http://localhost:3000/"><button type="button" id="searchButton">Volver a Buscar</button></a>
+ <br><br><br>
+<br><hr class='dashed'><br>
+    {{#each data}}
+        <p class="TittleNews">{{this.title}}</p>
+            {{#if author}}
+                <p class="AuthorNews">Por {{this.author}}</p>
+            {{/if}}
+            <p class="DescriptionNews">Descripción: {{this.description}}</p>
+            <p class="DescriptionNews">
+            <img src="{{this.urlToImage}}" class="Image" alt="Sin Imagen">
+            </p>
+            <p class="DescriptionNews"> Fuente: <a href="{{this.url}}" target="_blank">{{this.url}} </a></p>
+        
+        <br><hr class='dashed'><br>
+    {{/each}}
+
+ <br><br><br>
+  <a href="http://localhost:3000/"><button type="button" id="searchButton">Volver a Buscar</button></a>

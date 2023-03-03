@@ -1,0 +1,75 @@
+html {
+  margin: 0 auto;
+  padding: 0px;
+  font-family: serif;
+}
+
+body {
+  background-color: #97cbdc;
+}
+
+header, footer {
+  height: 130px;
+  width: 100%;
+  background-color: #018abd;
+  text-align: center;
+}
+
+.Tittle, .Tittle2 {
+  color: #dde8f0;
+  font-size: 60px;
+  text-align: center;
+}
+
+.Tittle2 {
+  color: #004581;
+}
+
+.ContainerInput {
+  height: 15% px;
+  width: 50%;
+  margin: auto;
+}
+
+#searchInput {
+  width: 100%;
+  height: 40px;
+  font-size: 36px;
+  background-color: white;
+  border: 3px solid #004581;
+  text-align: center;
+}
+
+#searchButton {
+  width: 80%;
+  height: 50px;
+  margin: 5px 10%;
+  font-size: 36px;
+  background-color: white;
+  border: 3px solid #004581;
+  text-align: center;
+}
+
+.Image {
+  height: 250px;
+}
+
+hr.dashed {
+  border-top: 5px solid #004581;
+}
+
+.News, .DescriptionNews, .AuthorNews, .TittleNews {
+  color: white;
+}
+
+.TittleNews {
+  font-size: 44px;
+}
+
+.AuthorNews {
+  font-size: 24px;
+}
+
+.DescriptionNews {
+  font-size: 20px;
+}

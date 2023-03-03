@@ -1,0 +1,86 @@
+@import "_mixins.scss";
+@import "_colors.scss";
+
+html{
+    @include margen;
+    font-family: serif;
+}
+
+body{
+    background-color: $generalBackground;
+}
+
+header, footer{
+    height: 130px;
+    width: 100%;
+    background-color: $textBackground;
+    text-align: center;
+}
+
+
+
+.Tittle{
+    color: $generalText;
+    font-size: 60px;
+    text-align: center;
+}
+
+.Tittle2{
+    @extend .Tittle;
+    color: $supportColor;   
+}
+
+.ContainerInput{
+    height: 15%px;
+    width: 50%;
+    margin: auto;
+}
+
+#searchInput{
+    width: 100%;
+    height: 40px;
+    font-size: 36px;
+
+    background-color: white;
+    border: 3px solid $supportColor;
+    text-align: center;
+}
+
+#searchButton{
+    width: 80%;
+    height: 50px;
+    margin: 5px 10%;
+    font-size: 36px;
+
+    background-color: white;
+    border: 3px solid $supportColor;
+    text-align: center;
+}
+
+.Image{
+    height: 250px;
+}
+
+
+hr.dashed{
+    border-top: 5px solid $supportColor;
+}
+
+.News{
+    color: white;
+}
+
+.TittleNews{
+    @extend .News;
+    font-size: 44px;
+}
+
+.AuthorNews{
+    @extend .News;
+    font-size: 24px;
+}
+.DescriptionNews{
+    @extend .News;
+    font-size: 20px;
+}
+
