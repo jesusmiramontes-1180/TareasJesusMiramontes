@@ -3,12 +3,11 @@ Sobre la Tarea de News App:
 Este proyecto utiliza diversas tecnologías para integrar News API
 con un servicio simple que muestra el contenido dentro de esta 
 utilizando una consulta sencilla.
-Todo corre sobre localhost:3000 tras usar nmp start en la terminal.
+Todo corre sobre localhost:3000 tras usar "nmp start" en la terminal.
 
 PREREQUISITOS
 Es necesario ejecutar los siguientes comandos en la terminal de la carpeta Tarea_4
 para correr el localhost:3000
-npm init
 npm install express
 npm install express-handlebars
 npm install axios
