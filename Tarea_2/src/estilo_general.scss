@@ -1,0 +1,67 @@
+@import "_mixins.scss";
+@import "_coloresPagina.scss";
+
+html{
+    @include margen;
+    font-family: serif;
+}
+
+body{
+    @extend html;
+    height: 100%;
+    background-color: $fondoPagina;
+}
+
+header, footer{
+    height: 130px;
+    width: 100%;
+    background-color: $fondoFooterHeader;
+    text-align: center;
+}
+
+main{
+    max-width: 1024px;
+    @include margen;
+}
+
+.container{
+    width: 100%;
+    > div{
+        background-color: $fondoContainer;
+        height: 200px;
+        width: 33%;
+        float: left;
+        border: solid 1px black;
+        box-sizing: border-box;
+        text-align: center;
+        @include primerBreakpoint{
+                width: 50%;
+        }
+        @include segundoBreakpoint{
+                width: 75%;
+        }
+    }
+}
+
+.container::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.Titulo{
+    font-size: 50px;
+    color: $colorTitulos;
+}
+
+.texto{
+    font-size: 25px;
+}
+
+.subtexto{
+    font-size: 20px;
+}
+
+.imagen{
+    height: 130px;
+}
