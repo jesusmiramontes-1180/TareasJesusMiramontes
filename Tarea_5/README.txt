@@ -18,7 +18,7 @@ las librerias:
 -swagger para documentar las rutas
 
 URL
-Además de esto, dentro el archivo .env se debera colocar la
+Además de esto, se debe crear un archivo .env donde se debera colocar la
 URL que conecta a MongoDB bajo el nombre: MONGO_URL para
 que el resto de archivos trabaje sin problemas.
 
