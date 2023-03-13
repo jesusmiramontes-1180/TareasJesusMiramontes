@@ -53,39 +53,45 @@ function ModificarTarea(req, res){
     let body = req.body;
     let idTarea = req.params.id;
 
-    console.log("ID de tarea a modificar: " + idTarea +"\nDatos recibidos:\n"+body);
+    if(body.estado != undefined && (body.estado != "Abierta" && body.estado != "Cerrada" && body.estado != "Eliminada")){
+        res.status(400).send('El estado no es válido');
+    }else{
+        console.log("ID de tarea a modificar: " + idTarea +"\nDatos recibidos:\n"+body);
     
-    Tarea.findOne({_id: idTarea})
-    .then(tarea =>{
-        if(tarea == null){
-            res.status(400).send('No se encontró tarea con el ID ingresado');
-        }else{
-
-            let cambios = { $set: body};
-            Tarea.updateOne({_id: idTarea}, cambios)
-            .then(tarea =>{
-                
-                Tarea.findOne({_id: idTarea})
-                .then(tarea =>{
-                    if(tarea == null){
-                        res.status(400).send('No se encontró tarea con el ID ingresado');
-                    }else{
-                        console.log("Tarea modificada:\n" + tarea);
-                        res.status(200).send("Tarea modificada:\n" + tarea);
-                    }
-
-                    
-                })
-            })
-            .catch(error =>{
+        Tarea.findOne({_id: idTarea})
+        .then(tarea =>{
+            if(tarea == null){
                 res.status(400).send('No se encontró tarea con el ID ingresado');
-            })
-        }
-        
-    })
-    .catch(error =>{
-        res.status(400).send('No se encontró tarea con el ID ingresado');
-    })
+            }else{
+
+                let cambios = { $set: body};
+                Tarea.updateOne({_id: idTarea}, cambios)
+                .then(tarea =>{
+                    
+                    Tarea.findOne({_id: idTarea})
+                    .then(tarea =>{
+                        if(tarea == null){
+                            res.status(400).send('No se encontró tarea con el ID ingresado');
+                        }else{
+                            console.log("Tarea modificada:\n" + tarea);
+                            res.status(200).send("Tarea modificada:\n" + tarea);
+                        }
+
+                        
+                    })
+                })
+                .catch(error =>{
+                    res.status(400).send('No se encontró tarea con el ID ingresado');
+                })
+            }
+            
+        })
+        .catch(error =>{
+            res.status(400).send('No se encontró tarea con el ID ingresado');
+        })
+    }
+
+    
 
 }
 

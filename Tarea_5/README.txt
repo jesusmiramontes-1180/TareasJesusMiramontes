@@ -18,7 +18,7 @@ las librerias:
 -swagger para documentar las rutas
 
 URL
-Además de esto, dentro el archivo .env se debera colocar la
+Además de esto, se debe crear un archivo .env donde se debera colocar la
 URL que conecta a MongoDB bajo el nombre: MONGO_URL para
 que el resto de archivos trabaje sin problemas.
 
@@ -32,7 +32,7 @@ ESQUEMA:
 La tarea se maneja mediante un esquema principal que es:
 titulo: string,
 descripcion: string,
-estado: string (Con posibles valores "Abierta", "Cerrada" y "Terminada"),
+estado: string (Con posibles valores "Abierta", "Cerrada" y "Eliminada"),
 fecha: date (se maneja como un formato en string "<YYYY-mm-ddTHH:MM:ss>", por ejemplo "2021-01-15T06:31:15Z")
 
 COMANDOS:
