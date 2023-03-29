@@ -1,0 +1,39 @@
+$back_color: #FDB360;
+$text_color: #FFF5E2;
+
+@mixin firstBreakpoint{
+    @media screen and (max-width: 1460px) {
+        @content;
+    }
+}
+
+@mixin secondBreakpoint{
+    @media screen and (max-width: 810px) {
+        @content;
+    }
+}
+
+
+div{
+    background-color: $back_color;
+    height: 130px;
+}
+
+nav, a{
+    font-size: 50px;
+    text-align: center;
+    color: $text_color;
+        color: $text_color; 
+        @include firstBreakpoint{
+            font-size: 40px;
+        }
+        @include secondBreakpoint{
+            font-size: 30px;
+        }
+
+}
+
+a:hover{
+    @extend a;
+    color: rgb(175, 236, 255);
+}

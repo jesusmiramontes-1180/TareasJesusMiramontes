@@ -1,0 +1,21 @@
+$back_color: #FDB360;
+$text_color: #5B484E;
+$support_color: #56938E;
+
+h1{
+    color: $text_color;
+    text-align: center;
+    font-size: 52px;
+    
+}
+
+h2{
+    @extend h1;
+    font-size: 40px;
+}
+
+h3, a{
+    color:  $support_color;
+    text-align: center;
+    font-size: 22px;
+}

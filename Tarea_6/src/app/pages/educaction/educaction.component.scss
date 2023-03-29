@@ -1,0 +1,25 @@
+$back_color: #FDB360;
+$text_color: #5B484E;
+$support_color: #56938E;
+@mixin centrar{
+    text-align: center;
+}
+
+
+h1, h2{
+    @include centrar;
+    color: $text_color;
+}
+
+h3{
+    @include centrar;
+    color: $support_color;
+}
+
+div{
+    text-align: center;
+}
+
+img{
+    height: 230px;
+}
